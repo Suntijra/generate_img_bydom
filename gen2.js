@@ -10,13 +10,13 @@ if (!fs.existsSync(outputFolder)) {
 registerFont('./Sarun.ttf', { family: 'TH Sarabun New' });
 
 function generateImages() {
-    for (let i = 45; i <= 45; i++) {
+    for (let i =0; i <= 45; i++) {
       const character = String.fromCharCode(3585 + i); // Unicode code for 'ก' + i
       const characterFolder = path.join(outputFolder, `c${i}`);
       if (!fs.existsSync(characterFolder)) {
         fs.mkdirSync(characterFolder);
       }
-      for (let j = 0; j < 5; j++) {
+      for (let j = 0; j < 500; j++) {
         const canvas = createCanvas(200, 300);
         const context = canvas.getContext('2d');
   
@@ -59,12 +59,12 @@ function generateImages() {
     const character = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     
     for (let i = 0; i <= 9; i++) {
-      // const character = String.fromCharCode(3585 + i); // Unicode code for 'ก' + i
+      const characters = character[i]
       const characterFolder = path.join(outputFolder, `n${i}`);
       if (!fs.existsSync(characterFolder)) {
         fs.mkdirSync(characterFolder);
       }
-      for (let j = 0; j < 5; j++) {
+      for (let j = 0; j < 500; j++) {
         const canvas = createCanvas(200, 300);
         const context = canvas.getContext('2d');
   
@@ -89,7 +89,7 @@ function generateImages() {
         const characterX = centerX + Math.random() * 10 - 5;
         const characterY = centerY + Math.random() * 10 - 5;
   
-        context.fillText(character, characterX, characterY);
+        context.fillText(characters, characterX, characterY);
   
         // Convert image to threshold
         const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
