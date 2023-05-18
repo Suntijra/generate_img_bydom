@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "jimp": "^0.22.8",
+    "ts-node": "^10.9.1",
+    "yarn": "^1.22.19"
+  },
+  "name": "dataset",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
